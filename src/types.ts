@@ -9,5 +9,7 @@ export interface Book {
 export interface BookListState {
     books:Book[],
     isLoading:boolean,
-    error:null | string
+    error:null | string,
+    bookInfo:Book | null,
+    isInfoLoading:boolean
 }

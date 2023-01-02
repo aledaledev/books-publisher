@@ -1,18 +1,39 @@
 {
-    "books":[
-        {
-            "id":"do1p29021ud20d102du12ojpd93",
-            "title":"rings of issue",
-            "author":"luups",
-            "price":29.9,
-            "description":"is a mistery book"
-        },
-        {
-            "id":"do112fasfgag0jdu12ojjhgjpolw",
-            "title":"kingdom ass",
-            "author":"luups",
-            "price":11.9,
-            "description":"tuki ranba ganga"
-        }
-    ]
+  "books": [
+    {
+      "id": "do1p29021ud20d102du12ojpd93",
+      "title": "rings of issue",
+      "author": "luups",
+      "price": 29.9,
+      "description": "is a mistery book"
+    },
+    {
+      "id": "do112fasfgag0jdu12ojjhgjpolw",
+      "title": "kingdom ass",
+      "author": "luups",
+      "price": 11.9,
+      "description": "tuki ranba ganga"
+    },
+    {
+      "title": "petes",
+      "price": "1",
+      "description": "si un libro de petes super baratito",
+      "id": "53c1db75-d077-4359-b6d9-96cc92558d3e",
+      "author": "aledale"
+    },
+    {
+      "title": "turtle",
+      "price": "314",
+      "description": "dni",
+      "id": "ecb51a14-adaa-48df-93d3-f2efd347e720",
+      "author": "aledale"
+    },
+    {
+      "title": "testing",
+      "price": "12",
+      "description": "milk milk",
+      "id": "aef117cb-fbcb-414e-8a95-243494f3f3f8",
+      "author": "aledale"
+    }
+  ]
 }

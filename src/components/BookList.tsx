@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { getBooks } from '../store/bookSlice'
+import { getBooks, getInfo } from '../store/bookSlice'
 import { Book, BookListState } from '../types'
 
 const BookList = () => {
@@ -12,12 +12,14 @@ const BookList = () => {
   },[dispatch])
 
   const {books,isLoading} = useSelector((store:any) => store.booklist) as BookListState
+  const {isLoggedIn} = useSelector((store:any) => store.auth)
 
-  const List = books.map(({title,id}) => {
+  const List = books.length===0?<h4>there is no books available</h4>:
+  books.map(({title,id}) => {
     return <div key={id}>
       <span>{title}</span>
-      <button>delete</button>
-      <button>more info</button>
+      <button disabled={!isLoggedIn}>delete</button>
+      <button onClick={() => dispatch(getInfo(id))}>more info</button>
     </div>
   })
 

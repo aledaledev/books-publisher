@@ -1,16 +1,20 @@
 import React from 'react'
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
+import { logInOut } from '../store/authSlice'
 
 const Header = () => {
 
+  const dispatch = useDispatch()
+
   const {error} = useSelector((store:any) => store.booklist)
+  const {isLoggedIn, userName} = useSelector((store:any) => store.auth)
 
   return (
     <>
     {error!==null?<p>{error}</p>:null}
     <header>
         <span>coolBooks</span>
-        <button>Log in</button>
+        <button onClick={() => dispatch(logInOut())}>{isLoggedIn?'log out':'log in'}</button>
     </header>
     </>
   )
