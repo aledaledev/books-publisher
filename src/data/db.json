@@ -1,0 +1,18 @@
+{
+    "books":[
+        {
+            "id":"do1p29021ud20d102du12ojpd93",
+            "title":"rings of issue",
+            "author":"luups",
+            "price":29.9,
+            "description":"is a mistery book"
+        },
+        {
+            "id":"do112fasfgag0jdu12ojjhgjpolw",
+            "title":"kingdom ass",
+            "author":"luups",
+            "price":11.9,
+            "description":"tuki ranba ganga"
+        }
+    ]
+}
