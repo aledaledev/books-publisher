@@ -1,6 +1,6 @@
 import React, { useRef } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { insertBook } from '../store/bookSlice'
+import { insertBook, toUpdate, updateBook } from '../store/bookSlice'
 import {v4 as uuid} from 'uuid'
 
 const BookForm = () => {
@@ -12,20 +12,40 @@ const BookForm = () => {
     const dispatch = useDispatch()
 
     const {userName,isLoggedIn} = useSelector((store:any) => store.auth) as {userName:string,isLoggedIn:boolean}
+    const {bookToUpdate} = useSelector((store:any) => store.booklist)
+
+    if(bookToUpdate!==null) {
+        title.current.value = bookToUpdate.title
+        price.current.value = bookToUpdate.price
+        description.current.value = bookToUpdate.description
+    }
 
     const handleSubmit = (e:React.FormEvent) => {
         e.preventDefault()
-        const bookData = {
-            title:title.current.value,
-            price:Number(price.current.value),
-            description:description.current.value,
-            id:uuid(),
-            //author:userName
+
+        if(bookToUpdate===null){
+            const bookData = {
+                title:title.current.value,
+                price:Number(price.current.value),
+                description:description.current.value,
+                id:uuid(),
+                //author:userName
+            }
+            dispatch(insertBook(bookData))
+        } else {
+            const bookData = {
+                ...bookToUpdate,
+                title:title.current.value,
+                price:Number(price.current.value),
+                description:description.current.value,
+            }
+            dispatch(updateBook(bookData))
         }
-        dispatch(insertBook(bookData))
-        title.current.value = ''
-        price.current.value = ''
-        description.current.value = ''
+            dispatch(toUpdate(null))
+            title.current.value = ''
+            price.current.value = ''
+            description.current.value = ''
+
     }
 
   return (
@@ -43,7 +63,8 @@ const BookForm = () => {
                 <label htmlFor="description">description:</label>
                 <textarea ref={description} name="description" id="description" style={{resize:'none'}}></textarea>
             </div>
-            <button type='submit' disabled={!isLoggedIn}>submit</button>
+            
+            <button type='submit' disabled={!isLoggedIn}>{bookToUpdate===null?'submit':'update'}</button>
         </form>
     </div>
   )

@@ -11,5 +11,6 @@ export interface BookListState {
     isLoading:boolean,
     error:null | string,
     bookInfo:Book | null,
-    isInfoLoading:boolean
+    //isInfoLoading:boolean,
+    bookToUpdate:Book | null,
 }

@@ -1,38 +1,45 @@
 {
   "books": [
     {
-      "id": "do1p29021ud20d102du12ojpd93",
-      "title": "rings of issue",
-      "author": "luups",
-      "price": 29.9,
-      "description": "is a mistery book"
-    },
-    {
-      "id": "do112fasfgag0jdu12ojjhgjpolw",
-      "title": "kingdom ass",
-      "author": "luups",
-      "price": 11.9,
-      "description": "tuki ranba ganga"
-    },
-    {
-      "title": "petes",
-      "price": "1",
-      "description": "si un libro de petes super baratito",
-      "id": "53c1db75-d077-4359-b6d9-96cc92558d3e",
+      "title": "chele",
+      "price": 231,
+      "description": "superfloo",
+      "id": "3124809e-4084-49ce-adf2-f3a341b7ceac",
       "author": "aledale"
     },
     {
-      "title": "turtle",
-      "price": "314",
-      "description": "dni",
-      "id": "ecb51a14-adaa-48df-93d3-f2efd347e720",
+      "title": "no me gusta subtitulo",
+      "price": 155,
+      "description": "no tna criminal perro",
+      "id": "36ffc32c-b147-4d4c-b1f2-2509944cc7eb",
       "author": "aledale"
     },
     {
-      "title": "testing",
-      "price": "12",
-      "description": "milk milk",
-      "id": "aef117cb-fbcb-414e-8a95-243494f3f3f8",
+      "title": "test 33",
+      "price": 90,
+      "description": "esta en dolares pa",
+      "id": "c1e7168d-dcc6-4596-a367-ee660ea830de",
+      "author": "aledale"
+    },
+    {
+      "title": "si te le re mandaste shaggy",
+      "price": 15,
+      "description": "jjajaj, no fue gracioso >:/",
+      "id": "fb619627-ba52-452b-90f7-ccc91193bb5c",
+      "author": "aledale"
+    },
+    {
+      "title": "pero el mio si no",
+      "price": 190,
+      "description": "todo pa",
+      "id": "57f3ae3a-030e-47f7-80e7-bb872c66c8a2",
+      "author": "yuy"
+    },
+    {
+      "title": "sapee",
+      "price": 3123,
+      "description": "te descubri",
+      "id": "2d93f635-fc7b-492a-b238-6fe6612f92c5",
       "author": "aledale"
     }
   ]
